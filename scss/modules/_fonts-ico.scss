@@ -1,0 +1,41 @@
+.icon{
+    display: flex;
+    justify-content: center;
+    color: var(--color-i);
+    margin-bottom: 30px;
+    &__link{
+        @include size(30px);
+        border-radius: 50%;
+        border: 2px solid currentColor;
+        text-align: center;
+        margin: 0 3px;
+        transition: all .3s ease;
+        &:hover{
+            color: var(--color-y);
+        }
+    }
+    &-item{
+        display: inline-block;
+        font-size: 14px;
+        line-height: 26px;
+    }
+    &-title{
+        font-size: 20px;
+    }
+    &-line{
+        position: relative;
+        &::before,
+        &::after{
+            @include size(calc(50% - 20px), 1px);
+            @include align(true, false, absolute);
+            content: '';
+            background: var(--color-y);
+        }
+        &:before{
+            left: 0;
+        }
+        &::after{
+            right: 0;
+        }
+    }
+}

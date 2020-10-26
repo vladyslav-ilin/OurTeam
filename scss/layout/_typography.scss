@@ -1,0 +1,31 @@
+.line {
+    @include size(20px, 4px);
+    background: var(--color-y);
+    position: relative;
+    margin: 0 auto 25px;
+    &::before,
+    &::after {
+        content: "";
+        @include size(10px, 100%);
+        position: absolute;
+        background: var(--color-y);
+    }
+    &::before {
+        left: -15px;
+    }
+    &::after {
+        right: -15px;
+    }
+}
+.button {
+    font: 14px/24px $font-open;
+    color: var(--color-b);
+    text-transform: uppercase;
+    border: 1px solid var(--color-y);
+    padding: 5px 10px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    &:hover {
+        background: var(--color-y);
+    }
+}

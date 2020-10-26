@@ -1,0 +1,18 @@
+.dots{
+    display: flex;
+    justify-content: center;
+&__list{
+    @include size(12px);
+    border-radius: 50%;
+    border: 1px solid var(--color-y);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all .3s ease;
+    &:hover{
+        background: var(--color-y);
+    }
+}
+&__list--active{
+    background: var(--color-y);
+}
+}

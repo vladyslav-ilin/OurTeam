@@ -1,0 +1,27 @@
+.arrow {
+    @include size(50px);
+    @include align(true, false, absolute);
+    cursor: pointer;
+    font-size: 22px;
+    color: var(--color-y);
+    line-height: 50px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    &:hover {
+        background: var(--color-i);
+        color: #fff;
+    }
+    &-left {
+        transform: rotate(180deg);
+        left: -6%;
+    }
+    &-right {
+        right: -6%;
+    }
+}
+.icon-arrow--left {
+    @include align(true, true, absolute);
+}
+.icon-arrow--right {
+    @include align(true, true, absolute);
+}
